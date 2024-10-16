@@ -15,3 +15,7 @@
 **Basic Command:** `docker run hello-world`
 
 ![docker client](./images/docker-client.excalidraw.png)
+
+## Containers
+
+![containers](./images/containers.excalidraw.png)
