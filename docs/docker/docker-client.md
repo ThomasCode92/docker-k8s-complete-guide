@@ -30,3 +30,7 @@
 ### Docker Stop vs Docker Kill
 
 ![docker stop vs kill](./images/stop-vs-kill.excalidraw.png)
+
+## Multi-Command Containers
+
+![redis-server and cli](./images/redis.excalidraw.png)
