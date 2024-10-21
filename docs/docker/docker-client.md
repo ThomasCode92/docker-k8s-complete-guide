@@ -23,3 +23,4 @@
 - **Run Container** - `docker run <image>`, create and start a container
 - **Delete Container** - `docker container rm <container_id>`, delete a container
 - **Clear all** - `docker system prune`, delete all unused data
+- **View Logs** - `docker logs <container_id>`, printout the logs of a container
