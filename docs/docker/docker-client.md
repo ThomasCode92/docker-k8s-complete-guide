@@ -13,3 +13,8 @@
 `docker run hello-world ls` => Will throw an error!
 
 ![busybox](./images/busybox-image.excalidraw.png)
+
+## Container Management
+
+- **List Containers** - `docker ps`, logs all running containers
+- **List all Containers** - `docker ps --all`, logs all running and stopped containers
