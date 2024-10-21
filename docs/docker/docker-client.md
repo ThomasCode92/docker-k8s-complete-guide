@@ -33,7 +33,7 @@
 
 ## Multi-Command Containers
 
-![redis-server and cli](./images/redis.excalidraw.png)
+![multi command containers](./images/multi-command.excalidraw.png)
 
 ### The _-it_ flag
 
