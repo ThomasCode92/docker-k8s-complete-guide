@@ -34,3 +34,7 @@
 ## Multi-Command Containers
 
 ![redis-server and cli](./images/redis.excalidraw.png)
+
+### The _-it_ flag
+
+![the -it flag](./images/it-flag.excalidraw.png)
