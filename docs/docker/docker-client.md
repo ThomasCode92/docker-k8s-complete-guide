@@ -21,3 +21,5 @@
 - **Create Container** - `docker create <image>`, create a container
 - **Start Container** - `docker start -a <container_id>`, start (or restart) a container
 - **Run Container** - `docker run <image>`, create and start a container
+- **Delete Container** - `docker container rm <container_id>`, delete a container
+- **Clear all** - `docker system prune`, delete all unused data
