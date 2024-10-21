@@ -21,6 +21,12 @@
 - **Create Container** - `docker create <image>`, create a container
 - **Start Container** - `docker start -a <container_id>`, start (or restart) a container
 - **Run Container** - `docker run <image>`, create and start a container
+- **Stop Container** - `docker stop <container_id>`, stop a container
+- **Kill Container** - `docker kill <container_id>`, kill a container
 - **Delete Container** - `docker container rm <container_id>`, delete a container
 - **Clear all** - `docker system prune`, delete all unused data
 - **View Logs** - `docker logs <container_id>`, printout the logs of a container
+
+### Docker Stop vs Docker Kill
+
+![docker stop vs kill](./images/stop-vs-kill.excalidraw.png)
