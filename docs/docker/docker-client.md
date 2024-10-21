@@ -18,3 +18,6 @@
 
 - **List Containers** - `docker ps`, logs all running containers
 - **List all Containers** - `docker ps --all`, logs all running and stopped containers
+- **Create Container** - `docker create <image>`, create a container
+- **Start Container** - `docker start -a <container_id>`, start a container
+- **Run Container** - `docker run <image>`, create and start a container
