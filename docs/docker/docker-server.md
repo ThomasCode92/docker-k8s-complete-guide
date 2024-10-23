@@ -6,3 +6,7 @@
 
 At the root level of this project, there is a _`docker`_ folder containing a _`Redis.Dockerfile`_. To create an image, run the following command from the root directory:<br />
 `docker build -f ./docker/Redis.Dockerfile .`.
+
+### Dockerfile Teardown
+
+![dockerfile](./images/dockerfile.excalidraw.png)
