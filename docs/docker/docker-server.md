@@ -10,3 +10,9 @@ At the root level of this project, there is a _`docker`_ folder containing a _`R
 ### Dockerfile Teardown
 
 ![dockerfile](./images/dockerfile.excalidraw.png)
+
+## Caching and Tagging
+
+### Caching
+
+Each step in a Dockerfile creates a layer, and if the content of a layer is unchanged, Docker pulls it from the cache instead of rebuilding it. Efficiently ordering commands in the Dockerfile can maximize cache use and speed up subsequent builds.
