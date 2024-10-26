@@ -7,3 +7,7 @@
 ### How NodeJS Works
 
 ![nodejs](./images/nodejs.excalidraw.png)
+
+## Container Port Mapping
+
+![port mapping](./images/port-mapping.excalidraw.png)
