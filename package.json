@@ -4,6 +4,7 @@
   "description": "build, test, and deploy docker applications with kubernetes",
   "author": "ThomasCode92 (inspired by Stephen Grider)",
   "scripts": {
+    "start:simpleweb": "npm start --prefix apps/simpleweb",
     "format": "prettier --write ."
   },
   "devDependencies": {

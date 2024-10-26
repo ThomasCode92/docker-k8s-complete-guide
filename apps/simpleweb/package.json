@@ -1,0 +1,17 @@
+{
+  "name": "simpleweb",
+  "version": "1.0.0",
+  "description": "simple web app, build with express",
+  "author": "ThomasCode92",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
