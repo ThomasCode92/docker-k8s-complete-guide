@@ -12,6 +12,7 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "always"
   },
+  "explorer.compactFolders": false,
 
   // JavaScript Specific Config
   "javascript.inlayHints.parameterNames.enabled": "all",
