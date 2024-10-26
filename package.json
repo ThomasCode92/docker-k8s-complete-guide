@@ -1,0 +1,12 @@
+{
+  "name": "docker-k8s-complete-guide",
+  "version": "1.0.0",
+  "description": "build, test, and deploy docker applications with kubernetes",
+  "author": "ThomasCode92 (inspired by Stephen Grider)",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}
