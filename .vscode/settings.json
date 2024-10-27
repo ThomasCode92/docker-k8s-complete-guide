@@ -2,6 +2,9 @@
   // Extensions
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
+  "material-icon-theme.files.associations": {
+    ".tool-versions": "settings"
+  },
 
   // IDE Config
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -12,6 +15,7 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "always"
   },
+  "explorer.compactFolders": false,
 
   // JavaScript Specific Config
   "javascript.inlayHints.parameterNames.enabled": "all",
