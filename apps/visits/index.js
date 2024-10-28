@@ -2,9 +2,12 @@ import express from 'express';
 import redis from 'redis';
 
 const app = express();
-const client = redis.createClient();
+const client = redis.createClient({
+  url: 'redis://redis-server:6379',
+});
 
-client.set('visits', 0);
+await client.connect();
+await client.set('visits', 0);
 
 app.get('/', async function (req, res) {
   const visits = await client.get('visits');
