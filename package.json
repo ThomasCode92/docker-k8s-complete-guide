@@ -5,6 +5,7 @@
   "author": "ThomasCode92 (inspired by Stephen Grider)",
   "scripts": {
     "start:simpleweb": "npm start --prefix apps/simpleweb",
+    "start:visits": "npm start --prefix apps/visits",
     "format": "prettier --write ."
   },
   "devDependencies": {
