@@ -1,0 +1,11 @@
+services:
+  redis-server:
+    image: redis
+  node-app:
+    build:
+      context: ../apps/visits
+      dockerfile: ../../docker/Visits.Dockerfile
+      tags:
+        - thomascode92/visits
+    ports:
+      - 8080:8080
