@@ -9,3 +9,4 @@ services:
         - thomascode92/visits
     ports:
       - 8080:8080
+    restart: always

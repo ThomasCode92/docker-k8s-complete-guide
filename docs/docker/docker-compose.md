@@ -16,3 +16,10 @@ Docker Compose simplifies the orchestration of _multi-container_ Docker applicat
   - at `--build` flag to build the image first
   - at `-d` flag to launch in the background
 - **Stop Containers** - `docker compose down`
+
+### Restart Policies
+
+- **_"no"_** - Never attempt to restart the container if it stops or crashes.
+- **_"always"_** - If the container stops "for any reason" always attempt to restart it.
+- **_"on-failure"_** - Only restart if the container stops with an error code.
+- **_"unless-stopped"_** - Always restart unless it is forcibly stopped.

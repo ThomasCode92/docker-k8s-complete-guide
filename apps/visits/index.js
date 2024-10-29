@@ -1,4 +1,5 @@
 import express from 'express';
+import process from 'process';
 import redis from 'redis';
 
 const app = express();
@@ -14,6 +15,10 @@ app.get('/', async function (req, res) {
   await client.set('visits', parseInt(visits) + 1);
 
   return res.send('Number of visits: ' + visits);
+});
+
+app.get('/error', function (req, res) {
+  process.exit(0);
 });
 
 app.listen(8080, function () {
