@@ -16,6 +16,7 @@ Docker Compose simplifies the orchestration of _multi-container_ Docker applicat
   - at `--build` flag to build the image first
   - at `-d` flag to launch in the background
 - **Stop Containers** - `docker compose down`
+- **Container Status** - `docker compose ps`
 
 ### Restart Policies
 
