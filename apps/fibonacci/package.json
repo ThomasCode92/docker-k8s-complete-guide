@@ -4,8 +4,8 @@
   "description": "calculate fibonacci numbers",
   "author": "ThomasCode92",
   "scripts": {
-    "dev:client": "npm run dev --prefix client",
-    "build:client": "npm run build --prefix client",
-    "test:client": "npm run test --prefix client"
+    "start": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "test": "npm run test --prefix client"
   }
 }
