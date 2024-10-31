@@ -20,6 +20,9 @@
     "source.organizeImports": "always"
   },
   "explorer.compactFolders": false,
+  "files.associations": {
+    "*.Dockerfile.dev": "dockerfile"
+  },
 
   // JavaScript Specific Config
   "javascript.inlayHints.parameterNames.enabled": "all",
