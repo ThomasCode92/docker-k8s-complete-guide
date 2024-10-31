@@ -8,9 +8,10 @@ The **Fibonacci** application is a _multi-container setup_ consisting of several
 
 ### Development
 
-To build the Docker Image and Start the Containers for development, use the following commands:
+To build the Docker Image and start the Containers for development, use the following commands:
 
 ```bash
-  # Build the Image
+  # Build the Image and Start the Container
   docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
+  docker run -p --rm --name fib-react-app 3000:5173 fib-client-dev
 ```
