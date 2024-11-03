@@ -14,4 +14,7 @@ To build the Docker Image and start the Containers for development, use the foll
   # Build the Image and Start the Container
   docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
   docker run -p 3000:5173 -v $(pwd)/apps/fibonacci/client:/usr/app -v /usr/app/node_modules fib-client-dev
+
+  # Use Docker Compose
+  docker compose -f docker/FibApp.docker-compose.yml up
 ```

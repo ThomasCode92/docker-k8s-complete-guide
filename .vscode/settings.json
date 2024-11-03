@@ -21,7 +21,8 @@
   },
   "explorer.compactFolders": false,
   "files.associations": {
-    "*.Dockerfile.dev": "dockerfile"
+    "*.Dockerfile.dev": "dockerfile",
+    "*.docker-compose.yml": "yaml"
   },
 
   // JavaScript Specific Config
