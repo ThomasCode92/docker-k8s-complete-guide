@@ -27,6 +27,11 @@ To run the unit tests inside the container, use the following commands:
 # Build the Image, or reuse the already existing Image
 docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
 
-# Run the unit tests
+# Run the unit tests, without live updates
 docker run -it fib-client-dev npm run test
+
+# Run the unit tests, with live updates
+docker compose -f docker/FibApp.docker-compose.yml up
+docker container ps # Copy Container ID
+docker exec -it <CONTAINER_ID> npm run test
 ```
