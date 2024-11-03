@@ -32,6 +32,6 @@ docker run -it fib-client-dev npm run test
 
 # Run the unit tests, with live updates
 docker compose -f docker/FibApp.docker-compose.yml up
-docker container ps # Copy Container ID
+docker container ps # Copy Container ID of Web
 docker exec -it <CONTAINER_ID> npm run test
 ```
