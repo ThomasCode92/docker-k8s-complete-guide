@@ -18,3 +18,15 @@ To build the Docker Image and start the Containers for development, use the foll
   # Use Docker Compose
   docker compose -f docker/FibApp.docker-compose.yml up
 ```
+
+### Running Tests
+
+To run the unit tests inside the container, use the following commands:
+
+```bash
+# Build the Image, or reuse the already existing Image
+docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
+
+# Run the unit tests
+docker run -it fib-client-dev npm run test
+```
