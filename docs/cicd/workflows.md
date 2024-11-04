@@ -2,6 +2,7 @@
 
 ## Development Workflow
 
+What is a _Development Workflow_?
 ![development workflow](./images/dev-workflow.excalidraw.png)
 
 ### Flow Specifics
@@ -26,6 +27,12 @@ These essential commands facilitate project workflow management, covering develo
 
 ![docker volumes](./images/docker-volumes.excalidraw.png)
 
-## Need for Nginx
+## Building for Production
+
+### Need for Nginx
 
 ![nginx](./images/nginx.excalidraw.png)
+
+### Multi-Step Docker Builds
+
+![multi step builds](./images/multi-step.excalidraw.png)
