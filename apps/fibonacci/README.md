@@ -8,16 +8,18 @@ The **Fibonacci** application is a _multi-container setup_ consisting of several
 
 ### Development
 
-To build the Docker Image and start the Containers for development, use the following commands:
+To build the Docker Image and launch the Container for development, run the following commands:
 
 ```bash
-  # Build the Image and Start the Container
-  docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
-  docker run -p 3000:5173 -v $(pwd)/apps/fibonacci/client:/usr/app -v /usr/app/node_modules fib-client-dev
+# Build the Image and Start the Container
+docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
+docker run -p 3000:5173 -v $(pwd)/apps/fibonacci/client:/usr/app -v /usr/app/node_modules fib-client-dev
 
-  # Use Docker Compose
-  docker compose -f docker/FibApp.docker-compose.yml up
+# Use Docker Compose
+docker compose -f docker/FibApp.docker-compose.yml up
 ```
+
+The volumes mounts the client app code directory, enabling real-time syncing of code changes without needing to rebuild the image. It also isolates the container’s `node_modules` from the local environment, ensuring consistency and preventing conflicts. Visit the application on [localhost:3000](http://localhost:3000/).
 
 ### Running Tests
 
@@ -58,3 +60,14 @@ docker exec -it <CONTAINER_ID> npm run test
 Note: Replace `<CONTAINER_ID>` with the actual ID of the running web container. This command enables continuous test results, supporting a test-driven development workflow.
 
 </details>
+
+### Production
+
+To build the Docker image and launch the containers for production, use the following commands:
+
+```bash
+docker build -f ./docker/FibClient.Dockerfile.prod -t thomascode92/fib-client --progress=plain ./apps/fibonacci/client/
+docker run -p 8080:80 thomascode92/fib-client
+```
+
+TThe application will be served by Nginx and is accessible at [localhost:8080](http://localhost:8080/).
