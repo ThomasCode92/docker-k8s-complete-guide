@@ -12,8 +12,8 @@ To build the Docker Image and launch the Container for development, run the foll
 
 ```bash
 # Build the Image and Start the Container
-docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
-docker run -p 3000:5173 -v $(pwd)/apps/fibonacci/client:/usr/app -v /usr/app/node_modules fib-client-dev
+docker build -f ./docker/FibClient.Dockerfile.dev -t thomascode92/fib-client:dev --progress=plain ./apps/fibonacci/client/
+docker run -p 3000:5173 -v $(pwd)/apps/fibonacci/client:/usr/app -v /usr/app/node_modules thomascode92/fib-client:dev
 
 # Use Docker Compose
 docker compose -f docker/FibApp.docker-compose.yml up
@@ -33,7 +33,7 @@ To execute unit tests within the Docker container for the _fibonacci client_ ser
 Begin by building the Docker image for the _fibonacci client_ application. This step creates a reusable development image. If the image already exists, building may be skipped.
 
 ```bash
-docker build -f ./docker/FibClient.Dockerfile.dev -t thomascode92/fib-client-dev --progress=plain ./apps/fibonacci/client/
+docker build -f ./docker/FibClient.Dockerfile.dev -t thomascode92/fib-client:dev --progress=plain ./apps/fibonacci/client/
 ```
 
 #### 2. Running Unit Tests
@@ -45,7 +45,7 @@ Choose between the following options based on development needs: **without live 
 This command runs the tests once, which is suitable for quick test checks.
 
 ```bash
-docker run -it thomascode92/fib-client-dev npm run test
+docker run -it thomascode92/fib-client:dev npm run test
 ```
 
 ##### Option B: Running Tests with Live Updates

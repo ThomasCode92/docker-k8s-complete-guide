@@ -4,7 +4,8 @@ services:
       context: ../apps/fibonacci/client
       dockerfile: ../../../docker/FibClient.Dockerfile.dev
       tags:
-        - thomascode92/fib-client-dev
+        - thomascode92/fib-client:dev
+    image: thomascode92/fib-client:dev
     volumes:
       - /usr/app/node_modules
       - ../apps/fibonacci/client:/usr/app
@@ -15,7 +16,8 @@ services:
       context: ../apps/fibonacci/client
       dockerfile: ../../../docker/FibClient.Dockerfile.dev
       tags:
-        - thomascode92/fib-client-dev
+        - thomascode92/fib-client:dev
+    image: thomascode92/fib-client:dev
     volumes:
       - /usr/app/node_modules
       - ../apps/fibonacci/client:/usr/app
