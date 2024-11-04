@@ -25,3 +25,7 @@ These essential commands facilitate project workflow management, covering develo
 ## Docker Volumes
 
 ![docker volumes](./images/docker-volumes.excalidraw.png)
+
+## Need for Nginx
+
+![nginx](./images/nginx.excalidraw.png)
