@@ -5,17 +5,26 @@
   "material-icon-theme.files.associations": {
     ".tool-versions": "settings"
   },
+  "material-icon-theme.folders.associations": {
+    "cicd": "ci"
+  },
 
   // IDE Config
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.linkedEditing": true,
+  "editor.rulers": [80],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "always"
   },
   "explorer.compactFolders": false,
+  "files.associations": {
+    "*.Dockerfile.dev": "dockerfile",
+    "*.Dockerfile.prod": "dockerfile",
+    "*.docker-compose.yml": "dockercompose"
+  },
 
   // JavaScript Specific Config
   "javascript.inlayHints.parameterNames.enabled": "all",

@@ -6,9 +6,11 @@
   "scripts": {
     "start:simpleweb": "npm start --prefix apps/simpleweb",
     "start:visits": "npm start --prefix apps/visits",
+    "start:fibonacci": "npm run dev:client --prefix apps/fibonacci",
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "vitest": "^2.1.4"
   }
 }
