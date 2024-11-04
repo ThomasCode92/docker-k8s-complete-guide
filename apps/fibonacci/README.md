@@ -21,17 +21,40 @@ To build the Docker Image and start the Containers for development, use the foll
 
 ### Running Tests
 
-To run the unit tests inside the container, use the following commands:
+To execute unit tests within the Docker container for the _fibonacci client_ service, follow the steps below. Two options are available: running tests without live updates for quick checks or with live updates for continuous development.
+
+<details>
+<summary>Steps to run the unit tests</summary>
+
+#### 1. Building the Docker Image
+
+Begin by building the Docker image for the _fibonacci client_ application. This step creates a reusable development image. If the image already exists, building may be skipped.
 
 ```bash
-# Build the Image, or reuse the already existing Image
-docker build -f ./docker/FibClient.Dockerfile.dev -t fib-client-dev --progress=plain ./apps/fibonacci/client/
+docker build -f ./docker/FibClient.Dockerfile.dev -t thomascode92/fib-client-dev --progress=plain ./apps/fibonacci/client/
+```
 
-# Run the unit tests, without live updates
-docker run -it fib-client-dev npm run test
+#### 2. Running Unit Tests
 
-# Run the unit tests, with live updates
+Choose between the following options based on development needs: **without live updates** (for single test runs) and **with live updates** (for continuous feedback as code is edited).
+
+##### Option A: Running Tests without Live Updates
+
+This command runs the tests once, which is suitable for quick test checks.
+
+```bash
+docker run -it thomascode92/fib-client-dev npm run test
+```
+
+##### Option B: Running Tests with Live Updates
+
+For live testing with automatic updates as code changes, start the service in an interactive mode using Docker Compose.
+
+```bash
 docker compose -f docker/FibApp.docker-compose.yml up
-docker container ps # Copy Container ID of Web
 docker exec -it <CONTAINER_ID> npm run test
 ```
+
+Note: Replace `<CONTAINER_ID>` with the actual ID of the running web container. This command enables continuous test results, supporting a test-driven development workflow.
+
+</details>
