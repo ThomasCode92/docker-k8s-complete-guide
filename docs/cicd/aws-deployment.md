@@ -5,3 +5,7 @@
 - **GitHub** - Free!
 - **GitHub Actions** Free!
 - **AWS** - Free, but credit card required!
+
+## GitHub Setup
+
+![github setup](./images/github-setup.excalidraw.png)
