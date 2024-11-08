@@ -34,12 +34,18 @@ jobs:
         run: |
           cd apps/fibonacci/client
           zip -r fib-client.zip . -x 'node_modules'
-      - name: Inspect Artifact
-        run: |
-          cd apps/fibonacci/client
-          unzip -l fib-client.zip
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: fib-client
           path: apps/fibonacci/client/fib-client.zip
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: fib-client
+      - name: Inspect Artifact
+        run: unzip -l fib-client.zip
