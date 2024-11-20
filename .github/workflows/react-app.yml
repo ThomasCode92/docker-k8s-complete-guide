@@ -28,8 +28,10 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
-      - name: Copy Dockerfile
-        run: cp ./docker/FibClient.Dockerfile.prod ./apps/fibonacci/client/Dockerfile
+      - name: Copy Dockerfile and Docker Compose
+        run: |
+          cp ./docker/FibClient.Dockerfile.prod ./apps/fibonacci/client/Dockerfile
+          cp ./docker/FibApp.docker-compose.prod.yml ./apps/fibonacci/client/docker-compose.yml
       - name: Create Artifact
         run: |
           cd apps/fibonacci/client
