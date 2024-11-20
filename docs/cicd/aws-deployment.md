@@ -27,3 +27,9 @@ GitHub Actions uses YAML files to define workflows, which are automated sequence
 #### GitHub Actions Flow
 
 ![gha flow](./images/gha-flow.excalidraw.png)
+
+## AWS Environment
+
+**AWS Elastic Beanstalk** simplifies the deployment of Dockerized applications by managing infrastructure, scaling, and updates. Single or multi-container Docker environments can be deployed using a `Dockerfile` or `docker-compose.yml`. The service automates the provisioning of resources such as _EC2 instances_, _load balancers_, and auto-scaling groups.
+
+![aws environment](./images/aws-env.excalidraw.png)
