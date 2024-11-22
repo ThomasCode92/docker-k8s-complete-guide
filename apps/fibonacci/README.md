@@ -4,6 +4,12 @@
 
 The **Fibonacci** application is a _multi-container setup_ consisting of several services. Docker configuration files are located in the [`/docker`](/docker/) directory, with related files prefixed by _"Fib"_ (e.g. `FibClient.Dockerfile.dev`). The application's source code resides in the [`/apps/fibonacci`](/apps/fibonacci/) directory.
 
+### Application Overview
+
+| Fibonacci Sequence                                  | Client Mockup                           |
+| --------------------------------------------------- | --------------------------------------- |
+| ![app overview](./docs/fib-sequence.excalidraw.png) | ![mockup](./docs/mockup.excalidraw.png) |
+
 ## Usage Instructions
 
 ### Development
