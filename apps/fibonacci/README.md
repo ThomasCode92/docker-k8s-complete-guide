@@ -10,6 +10,10 @@ The **Fibonacci** application is a _multi-container setup_ consisting of several
 | --------------------------------------------------- | --------------------------------------- |
 | ![app overview](./docs/fib-sequence.excalidraw.png) | ![mockup](./docs/mockup.excalidraw.png) |
 
+### Architecture Diagram
+
+![app architecture](./docs/app-architecture.excalidraw.png)
+
 ## Usage Instructions
 
 ### Development
