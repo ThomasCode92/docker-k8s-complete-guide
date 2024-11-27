@@ -6,7 +6,8 @@
     ".tool-versions": "settings"
   },
   "material-icon-theme.folders.associations": {
-    "cicd": "ci"
+    "cicd": "ci",
+    "worker": "controller"
   },
 
   // IDE Config
