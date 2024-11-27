@@ -23,6 +23,9 @@ To build the Docker Image and launch the Container for development, run the foll
 ```bash
 # Build the Image and Start the Container
 docker build -f ./docker/FibClient.Dockerfile.dev -t thomascode92/fib-client:dev --progress=plain ./apps/fibonacci/client/
+docker build -f ./docker/FibServer.Dockerfile.dev -t thomascode92/fib-server:dev --progress=plain ./apps/fibonacci/server/
+docker build -f ./docker/FibWorker.Dockerfile.dev -t thomascode92/fib-worker:dev --progress=plain ./apps/fibonacci/worker/
+
 docker run -p 3000:5173 -v $(pwd)/apps/fibonacci/client:/usr/app -v /usr/app/node_modules thomascode92/fib-client:dev
 
 # Use Docker Compose
