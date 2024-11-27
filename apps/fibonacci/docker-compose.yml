@@ -14,3 +14,20 @@ services:
     volumes:
       - /usr/app/node_modules
       - ./server:/usr/app
+  worker:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./worker
+    volumes:
+      - /usr/app/node_modules
+      - ./worker:/usr/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /usr/app/node_modules
+      - ./client:/usr/app
