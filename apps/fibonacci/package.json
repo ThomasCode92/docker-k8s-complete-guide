@@ -2,10 +2,5 @@
   "name": "fibonacci",
   "version": "1.0.0",
   "description": "calculate fibonacci numbers",
-  "author": "ThomasCode92",
-  "scripts": {
-    "start": "npm run dev --prefix client",
-    "build": "npm run build --prefix client",
-    "test": "npm run test --prefix client"
-  }
+  "author": "ThomasCode92"
 }
