@@ -3,3 +3,12 @@ services:
     image: 'postgres:latest'
     environment:
       - POSTGRES_PASSWORD=postgres_password
+  redis:
+    image: 'redis:latest'
+  server:
+    build:
+      context: ../apps/fibonacci/server
+      dockerfile: ../../../docker/FibServer.Dockerfile.dev
+    volumes:
+      - /usr/app/node_modules
+      - ../apps/fibonacci/server:/usr/app
