@@ -20,4 +20,34 @@ export default function Fibonacci() {
     fetchValues();
     fetchIndexes();
   }, []);
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    await axios.post('/api/values', { index });
+    setIndex('');
+  }
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>Enter your index</label>
+        <input
+          type="text"
+          value={index}
+          onChange={event => setIndex(event.target.value)}
+        />
+        <button>Submit</button>
+      </form>
+      <h3>Indexes I have seen:</h3>
+      {seenIndexes.map(({ number }) => number).join(', ')}
+      <h3>Calculated values:</h3>
+      <ul>
+        {Object.keys(values).map(key => (
+          <li key={key}>
+            For index {key} I calculated {values[key]}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }

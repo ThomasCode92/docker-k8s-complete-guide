@@ -1,5 +1,7 @@
+import Fibonacci from './Fibonacci';
+
 import './App.css';
 
 export default function App() {
-  return <h1>Fibonacci</h1>;
+  return <Fibonacci />;
 }
