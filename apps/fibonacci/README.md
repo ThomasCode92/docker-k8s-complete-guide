@@ -14,6 +14,10 @@ The **Fibonacci** application is a _multi-container setup_ consisting of several
 
 ![app architecture](./docs/app-architecture.excalidraw.png)
 
+#### Nginx Path Routing
+
+![nginx routing](./docs/nginx-routing.excalidraw.png)
+
 ## Usage Instructions
 
 ### Development
