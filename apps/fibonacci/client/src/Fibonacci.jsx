@@ -30,7 +30,7 @@ export default function Fibonacci() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Enter your index</label>
+        <label>Enter your index:</label>
         <input
           type="text"
           value={index}
