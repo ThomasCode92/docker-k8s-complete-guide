@@ -5,6 +5,13 @@ services:
       - POSTGRES_PASSWORD=postgres_password
   redis:
     image: 'redis:latest'
+  nginx:
+    image: 'nginx:latest'
+    ports:
+      - 8080:80
+    volumes:
+      - ./config/default.nginx:/etc/nginx/nginx.conf
+    restart: always
   api:
     build:
       dockerfile: Dockerfile.dev
