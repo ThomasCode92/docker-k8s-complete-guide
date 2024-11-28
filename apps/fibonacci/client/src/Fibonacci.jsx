@@ -8,13 +8,13 @@ export default function Fibonacci() {
 
   useEffect(() => {
     async function fetchValues() {
-      const values = await axios.get('/api/values/current');
-      setValues(values.data);
+      const response = await axios.get('/api/values/current');
+      setValues(response.data);
     }
 
     async function fetchIndexes() {
-      const indexes = await axios.get('/api/values/all');
-      setSeenIndexes(indexes);
+      const response = await axios.get('/api/values/all');
+      setSeenIndexes(response.data.values);
     }
 
     fetchValues();

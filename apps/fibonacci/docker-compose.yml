@@ -10,8 +10,11 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./config/default.nginx:/etc/nginx/nginx.conf
+      - ./config/default.nginx:/etc/nginx/conf.d/default.conf
     restart: always
+    depends_on:
+      - client
+      - api
   api:
     build:
       dockerfile: Dockerfile.dev
