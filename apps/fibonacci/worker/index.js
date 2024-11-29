@@ -9,8 +9,10 @@ const client = redis.createClient({
 
 const clientSub = client.duplicate();
 
-clientSub.on('message', (_channel, message) => {
+await client.connect();
+await clientSub.connect();
+
+clientSub.subscribe('insert', message => {
+  console.log('Insert event received:', message || 'no message');
   client.hSet('values', message, fib(parseInt(message)));
 });
-
-clientSub.subscribe('insert');

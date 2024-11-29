@@ -35,6 +35,9 @@ const redisClient = redis.createClient({
 
 const redisPublisher = redisClient.duplicate();
 
+await redisClient.connect();
+await redisPublisher.connect();
+
 // Express route handlers
 app.get('/', function (_req, res) {
   return res.json({ message: 'server is running' });
