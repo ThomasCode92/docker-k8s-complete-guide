@@ -35,7 +35,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           cd apps/fibonacci
-          docker build -f ./client/Dockerfile.prod -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-client ./client/
-          docker build -f ./server/Dockerfile.prod -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-server ./server/
-          docker build -f ./worker/Dockerfile.prod -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-worker ./worker/
-          docker build -f ./gateway/Dockerfile.prod -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-gateway ./gateway/
+          docker build -f ./client/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-client ./client/
+          docker build -f ./server/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-server ./server/
+          docker build -f ./worker/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-worker ./worker/
+          docker build -f ./gateway/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-gateway ./gateway/
