@@ -19,14 +19,15 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v3
       - name: Build Docker Image
-        run: |
-          cd apps/fibonacci
-          docker build -f ./client/Dockerfile.dev -t fib-test ./client/
+        run: docker build -f ./apps/fibonacci/client/Dockerfile.dev -t fib-test ./apps/fibonacci/client/
       - name: Run Tests
         run: docker run -e CI=true fib-test npm run test
   push_docker_hub:
     runs-on: ubuntu-latest
     needs: test
+    strategy:
+      matrix:
+        service: [client, server, worker, gateway]
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
@@ -35,7 +36,4 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           cd apps/fibonacci
-          docker build -f ./client/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-client ./client/
-          docker build -f ./server/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-server ./server/
-          docker build -f ./worker/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-worker ./worker/
-          docker build -f ./gateway/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-gateway ./gateway/
+          docker build -f ./${{ matrix.service }}/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-${{ matrix.service }} ./${{ matrix.service }}/
