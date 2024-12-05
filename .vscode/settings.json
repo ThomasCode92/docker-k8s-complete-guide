@@ -7,7 +7,8 @@
   },
   "material-icon-theme.folders.associations": {
     "cicd": "ci",
-    "worker": "controller"
+    "worker": "controller",
+    "gateway": "other"
   },
 
   // IDE Config
