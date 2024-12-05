@@ -37,3 +37,4 @@ jobs:
         run: |
           cd apps/fibonacci
           docker build -f ./${{ matrix.service }}/Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/fib-${{ matrix.service }} ./${{ matrix.service }}/
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/fib-${{ matrix.service }}
