@@ -1,0 +1,20 @@
+services:
+  client:
+    image: thomascode92/fib-client
+    mem_limit: 128m
+    hostname: client
+  server:
+    image: thomascode92/fib-server
+    mem_limit: 128m
+    hostname: api
+  worker:
+    image: thomascode92/fib-worker
+    mem_limit: 128m
+  gateway:
+    image: thomascode92/fib-gateway
+    depends_on:
+      - client
+      - server
+    mem_limit: 128m
+    ports:
+      - 80:80
