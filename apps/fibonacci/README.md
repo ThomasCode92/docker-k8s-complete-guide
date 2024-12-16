@@ -25,11 +25,11 @@ The **Fibonacci** application is a _multi-container architecture_ comprising mul
 Follow these steps to build the Docker images and launch the containers for development:
 
 ```bash
+# Start the application in detached mode
+docker compose -f docker-compose.dev.yml up -d
 
-cd apps/fibonacci       # Navigate to the appropriate directory
-docker compose up -d    # Start the application in detached mode
-
-docker compose down -v  # Stop the application, and remove associated volumes
+# Stop the application, and remove associated volumes
+docker compose -f docker-compose.dev.yml down -v
 ```
 
 #### Running Tests
