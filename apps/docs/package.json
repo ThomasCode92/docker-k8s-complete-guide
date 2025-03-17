@@ -1,0 +1,21 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Documentation about Docker and Kubernetes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "Thomas (and Stephen Grider)",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^5.5.2"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.4",
+    "typescript": "5.8.2"
+  }
+}
