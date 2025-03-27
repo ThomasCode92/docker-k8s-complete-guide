@@ -3,9 +3,9 @@ import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
+import PostList from "../components/PostList.astro";
 
 const posts = await getCollection("posts");
-console.log(posts);
 ---
 
 <Layout title="Blog - Docker & Kubernetes">
@@ -13,12 +13,6 @@ console.log(posts);
     <h1 class="text-6xl text-sky-900 font-bold mb-16 max-sm:text-2xl">
       All blog posts
     </h1>
-    {
-      posts.map(post => (
-        <a href={`/blog/${post.slug}`}>
-          <h2>{post.data.title}</h2>
-        </a>
-      ))
-    }
+    <PostList posts={posts} />
   </Main>
 </Layout>
