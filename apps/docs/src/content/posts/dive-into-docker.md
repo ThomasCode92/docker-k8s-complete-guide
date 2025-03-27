@@ -2,7 +2,7 @@
 author: Thomas
 categories: ["introduction", "docker"]
 date: 27/03/2025
-image: /images/docker.png
+image: /images/dive-into-docker.webp
 title: Dive into Docker!
 ---
 
@@ -11,16 +11,10 @@ it's widely used. We'll break down the concept of images and their relationship
 to containers. Additionally, we'll walk through the process of creating and
 running a simple Docker container.
 
-# Dive into Docker
-
 ## What and Why Docker?
 
-The following diagram shows a typical installation process for a software
-package.
-
-```mermaid
-flowchart TD
-    id1[Download installer] --> id2[Run installer] --> id3[Get an Error installation]
-    --> id4[Troubleshoot issue] --> id5[Rerun installer] --> id6[Get another Error!]
-    --> id4
-```
+As a developer, you often need to set up software on your machine, whether it's
+a web server, a database, or another program. You download and run the
+installer, but an error appears. After troubleshooting, you try again, only to
+encounter another error. This leads to a cycle of troubleshooting and retrying
+until the installation is successful.
