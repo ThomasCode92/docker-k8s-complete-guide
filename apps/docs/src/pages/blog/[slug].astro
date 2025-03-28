@@ -1,5 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
 import Main from "../../components/Main.astro";
 import Layout from "../../layouts/Layout.astro";
 
@@ -24,7 +26,7 @@ const { Content } = await post.render();
     <h1 class="text-6xl text-sky-900 font-bold mb-16 max-sm:text-2xl">
       {post.data.title}
     </h1>
-    <img
+    <Image
       src={post.data.image}
       alt={post.data.title}
       class="rounded-2xl shadow-xl mb-4 object-cover"

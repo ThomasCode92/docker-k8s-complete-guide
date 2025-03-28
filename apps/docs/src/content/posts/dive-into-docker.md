@@ -2,7 +2,7 @@
 author: Thomas
 categories: ["introduction", "docker"]
 date: 27/03/2025
-image: /images/dive-into-docker.webp
+image: ./images/dive-into-docker.jpg
 title: Dive into Docker!
 ---
 
