@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import PostList from "../components/PostList.astro";
+
+const posts = await getCollection("posts");
+---
+
+<Layout title="Blog - Docker & Kubernetes">
+  <Main>
+    <h1 class="text-6xl text-sky-900 font-bold mb-16 max-sm:text-2xl">
+      All blog posts
+    </h1>
+    <PostList posts={posts} />
+  </Main>
+</Layout>
