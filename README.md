@@ -35,7 +35,8 @@ structured and efficient way.
 
 - `@repo/eslint-config`: `eslint` configurations (includes
   `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@repo/typescript-config`: `tsconfig.json`'s used throughout the monorepo
+- `@apps/docs`: A blog providing documentation on _Docker_ and _Kubernetes_.
 
 This Turborepo has some additional tools already setup:
 
