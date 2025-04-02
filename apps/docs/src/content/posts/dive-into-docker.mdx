@@ -6,6 +6,9 @@ image: ./images/dive-into-docker.jpg
 title: Dive into Docker!
 ---
 
+import { Image } from "astro:assets";
+import diagram from "./diagrams/image-container.excalidraw.png";
+
 In this article, we'll explore Docker, its role in software development, and why
 it's widely used. We'll break down the concept of images and their relationship
 to containers. Additionally, we'll walk through the process of creating and
@@ -17,4 +20,15 @@ As a developer, you often need to set up software on your machine, whether it's
 a web server, a database, or another program. You download and run the
 installer, but an error appears. After troubleshooting, you try again, only to
 encounter another error. This leads to a cycle of troubleshooting and retrying
-until the installation is successful.
+until the installation is successful. This is the exact problem Docker solves.
+
+**Why use Docker?** Docker makes it really easy to install and run software
+without worring about setup and dependencies.
+
+**What is Docker?** Docker is a platform designed for creating and running
+_containers_. Its ecosystem includes several components, such as the _Docker
+Client_, _Docker Server_, _Docker Machine_, _Docker Images_, _Docker Hub_, and
+_Docker Compose_, among others. These tools work together to simplify
+containerized application development and deployment.
+
+<Image src={diagram} alt="image vs container" class="mx-auto" />
