@@ -7,7 +7,8 @@ title: Dive into Docker!
 ---
 
 import { Image } from "astro:assets";
-import diagram from "./diagrams/image-container.excalidraw.png";
+import image_container from "./diagrams/image-container.excalidraw.png";
+import docker_client from "./diagrams/docker-client.excalidraw.png";
 
 In this article, we'll explore Docker, its role in software development, and why
 it's widely used. We'll break down the concept of images and their relationship
@@ -31,7 +32,7 @@ Client_, _Docker Server_, _Docker Machine_, _Docker Images_, _Docker Hub_, and
 _Docker Compose_, among others. These tools work together to simplify
 containerized application development and deployment.
 
-<Image src={diagram} alt="image vs container" class="mx-auto" />
+<Image src={image_container} alt="image vs container" class="mx-auto" />
 
 ## Install Docker
 
@@ -40,3 +41,13 @@ options for your operating system on the
 [Docker website](https://docs.docker.com/get-started/get-docker/). To check if
 docker is installed, run the following command in your terminal:
 `docker --version`. If it shows a version number, you're good to go!
+
+## Docker Client
+
+<Image src={docker_client} alt="docker client" class="mx-auto" />
+
+When trying to run a Container from an image, the _Docker Cleint_ reaches out to
+the _Docker Server_ to check if the image is available. The _Docker Server_ will
+then check if the image is available locally. If not, it will download the image
+from _Docker Hub_ (a public repository for Docker images). Once the image is
+downloaded, the _Docker Server_ will create a container from the image.
